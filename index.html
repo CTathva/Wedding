@@ -62,6 +62,7 @@
             margin-top: -7%;
             font-family: 'Great Vibes';
             font-size: 500%;
+            letter-spacing: 5%;
             text-align: center;
             color: #eeb62f;
         }
@@ -152,19 +153,53 @@
             margin-bottom: 5%;
             margin-top: -5%;
         }
+
+        .slider {
+            -webkit-appearance: none;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: 1%;
+            height: 60px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+            }
+
+            .slider:hover {
+            opacity: 1;
+            }
+
+            .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 60px;
+            height: 60px;
+            background: #e4a91f;
+            cursor: pointer;
+            }
+
+            .slider::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            background: #e4a91f;
+            cursor: pointer;
+            }
       
     </style>
     <script text="text/s">
         window.onload = function(){ 
             window.scrollTo(0,0);
         var splash = document.getElementById("splash");
-        var mainsec = document.getElementById("mainsec");
+        var header = document.getElementById("header");
 
         async function sleep() {
         await new Promise(resolve => setTimeout(resolve, 2500));
         splash.style.display ='none';
 
-            mainsec.style.display ='block';
+        header.style.display ='block';
         }
 
         sleep();
@@ -196,6 +231,18 @@
 
             }
         }
+        function check(){
+            var header = document.getElementById('header');
+            var mainsec = document.getElementById('mainsec');
+            var range = document.getElementById('myRange').value;
+            console.log(range);
+            if (range == 100) {
+                header.style.display ='none';
+                mainsec.style.display ='block';
+            }
+            
+
+        }
     </script>
     <body>
         <section id="splash">
@@ -203,6 +250,15 @@
             <h1 class="name">Wedding Invitation</h1>
             <img class="boder-bottom" src="border.webp"style="margin-bottom: 50%;">
         </section>  
+
+        <section id="header" style="display: none;">
+                <h1 class="name" style="margin-top: 15%;">Harshitha</h1>
+                <h2 class="name-mid" style="margin-top: 5%;">weds</h2>
+                <h1 class="name" style="margin-top: 15%;">Shashidhar</h1>
+                <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onchange="check()">
+
+        </section>  
+
         <section style="display: none;" id="mainsec">
             
             <header><p class="hashtag">#HARSHITHASHASHIDHAR</p></header>
