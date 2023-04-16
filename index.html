@@ -18,11 +18,16 @@
             list-style: none;
             box-sizing: border-box;
         }
+        @keyframes fade {
+        from {opacity: 0.7}
+        to {opacity: 1}
+        }
         body{
             /* background-color: #f9f9f9; */
             background-image: linear-gradient(#090a11,#5d041c,#090a11);
 
         }
+        
         footer{
             width: 100%;
             padding: 1%;
@@ -149,18 +154,20 @@
         }
       
     </style>
-    <script>
+    <script text="text/s">
         window.onload = function(){ 
-  
-        var splash = document.getElementsByClassName("splash");
-        var mainsec = document.getElementsByClassName("mainsec");
+            window.scrollTo(0,0);
+        var splash = document.getElementById("splash");
+        var mainsec = document.getElementById("mainsec");
 
-
-        const work = async () => {
-        await sleep(5000)
+        async function sleep() {
+        await new Promise(resolve => setTimeout(resolve, 2500));
         splash.style.display ='none';
-                    mainsec.style.display ='block';}
-        work()
+
+            mainsec.style.display ='block';
+        }
+
+        sleep();
 
         
 
