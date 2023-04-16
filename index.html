@@ -158,12 +158,12 @@
             -webkit-appearance: none;
             position: fixed;
             bottom: 0;
-            width: 100%;
+            width: 63%;
             margin-bottom: 1%;
-            height: 60px;
-            background: #d3d3d3;
+            height: 600px;
+            background: transparent;
             outline: none;
-            opacity: 0.7;
+            opacity: 1;
             -webkit-transition: .2s;
             transition: opacity .2s;
             }
@@ -175,9 +175,18 @@
             .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 60px;
-            height: 60px;
-            background: #e4a91f;
+            width: 230px;
+            outline: none;
+            filter: invert(80%) sepia(41%) saturate(1749%) hue-rotate(345deg) brightness(94%) contrast(90%);
+            background-image: url('girl.png');
+            height: 600px;
+            box-shadow: none;
+            cursor: pointer;
+            }
+            .slider::-webkit-slider-thumb :focus {
+            
+            outline: none;
+            
             cursor: pointer;
             }
 
@@ -207,6 +216,7 @@
         
 
 }
+
         function navigate(a){
             var family = document.getElementById('first');
             var invite = document.getElementById('second');
@@ -253,8 +263,9 @@
 
         <section id="header" style="display: none;">
                 <h1 class="name" style="margin-top: 15%;">Harshitha</h1>
-                <h2 class="name-mid" style="margin-top: 5%;">weds</h2>
+                <h2 class="name-mid" style="margin-top: 5%;">&hearts;</h2>
                 <h1 class="name" style="margin-top: 15%;">Shashidhar</h1>
+                <img src="boy.png" style="position: fixed; bottom: 0; right: 0; filter: invert(80%) sepia(41%) saturate(1749%) hue-rotate(345deg) brightness(94%) contrast(90%); ">
                 <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onchange="check()">
 
         </section>  
