@@ -20,7 +20,7 @@
         }
         body{
             /* background-color: #f9f9f9; */
-            background-image: linear-gradient(#090a11,#5d041c,#92124c,#a30575);
+            background-image: linear-gradient(#090a11,#5d041c,#090a11);
 
         }
         footer{
@@ -41,7 +41,7 @@
         header{
             width: 100%;
             padding: 1%;
-            height: 90px;
+            height: 120px;
             border-bottom: 1px solid #e4a91f;
             display: flex;
             z-index: 100;
@@ -150,6 +150,21 @@
       
     </style>
     <script>
+        window.onload = function(){ 
+  
+        var splash = document.getElementsByClassName("splash");
+        var mainsec = document.getElementsByClassName("mainsec");
+
+
+        const work = async () => {
+        await sleep(5000)
+        splash.style.display ='none';
+                    mainsec.style.display ='block';}
+        work()
+
+        
+
+}
         function navigate(a){
             var family = document.getElementById('first');
             var invite = document.getElementById('second');
@@ -176,7 +191,12 @@
         }
     </script>
     <body>
-        <section>
+        <section id="splash">
+            <img class="hero-image" src="header.webp" style="margin-top: 50%;">
+            <h1 class="name">Wedding Invitation</h1>
+            <img class="boder-bottom" src="border.webp"style="margin-bottom: 50%;">
+        </section>  
+        <section style="display: none;" id="mainsec">
             
             <header><p class="hashtag">#HARSHITHASHASHIDHAR</p></header>
 
