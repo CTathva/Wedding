@@ -3,6 +3,7 @@
     <link href='https://fonts.googleapis.com/css?family=Great Vibes' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Dongle' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
 
     <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 
@@ -24,7 +25,7 @@
         }
         body{
             /* background-color: #f9f9f9; */
-            background-image: linear-gradient(#090a11,#5d041c,#090a11);
+          /*  background-image: linear-gradient(#090a11,#5d041c,#090a11);*/
 
         }
         
@@ -196,6 +197,25 @@
             background: #e4a91f;
             cursor: pointer;
             }
+
+            .splash{
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+            }
+
+            
+
+            .splash-text{
+                color: navy;
+                z-index: 10; position: absolute; 
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Kaushan Script';
+                font-size: 650%;
+            }
       
     </style>
     <script text="text/s">
@@ -208,7 +228,7 @@
         await new Promise(resolve => setTimeout(resolve, 2500));
         splash.style.display ='none';
 
-        header.style.display ='block';
+       header.style.display ='block';
         }
 
         sleep();
@@ -255,20 +275,26 @@
         }
     </script>
     <body>
-        <section id="splash">
+        <div class="splash" id="splash">
+            <img src="splash.png" style="height: 100%;" >
+            <h1 class="splash-text">Wedding Invitation</h1>
+        </div>
+
+        <!-- <section id="splash" style="display: none;">
             <img class="hero-image" src="header.webp" style="margin-top: 50%;">
             <h1 class="name">Wedding Invitation</h1>
             <img class="boder-bottom" src="border.webp"style="margin-bottom: 50%;">
-        </section>  
+        </section>  -->
 
-        <section id="header" style="display: none;">
+        <div class="splash" id="header" style="display: none;">
+            <img src="headerback.png" style="height: 100%;" >
                 <h1 class="name" style="margin-top: 15%;">Harshitha</h1>
                 <h2 class="name-mid" style="margin-top: 5%;">&hearts;</h2>
                 <h1 class="name" style="margin-top: 15%;">Shashidhar</h1>
                 <img src="boy.png" style="position: fixed; bottom: 0; right: 0; filter: invert(80%) sepia(41%) saturate(1749%) hue-rotate(345deg) brightness(94%) contrast(90%); ">
                 <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onchange="check()">
 
-        </section>  
+        </div>  
 
         <section style="display: none;" id="mainsec">
             
@@ -348,6 +374,6 @@
             <section>
 
             </section>
-        </section>
+        </section> s
     </body>
 </html>
