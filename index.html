@@ -5,6 +5,8 @@
     <link href='https://fonts.googleapis.com/css?family=Dongle' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Kaushan Script' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Macondo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Oregano' rel='stylesheet'>
+
 
     <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 
@@ -52,6 +54,7 @@
             border-bottom: 1px solid #e4a91f;
             display: flex;
             z-index: 100;
+            background-color: transparent;
             align-items: center;
         }
         .hashtag{
@@ -218,22 +221,22 @@
             }
             
             .header-text{
-                color: #0144FF;
+                color: #FFF;
                 z-index: 10; position: absolute; 
                 top: 10%;
                 left: 70%;
                 transform: translate(-50%, -50%);
-                font-family: 'Great Vibes';
+                font-family: 'Oregano';
                 font-size: 750%;
             }
 
             .header-mid-text{
                 color: navy;
-                font-family: 'Tangerine';
+                font-family: 'Yatra One';
                  font-size: 600%;
                 z-index: 10; position: absolute; 
                 top: 10%;
-                left: 72.5%;
+                left: 70%;
                 transform: translate(-50%, -50%);
             }
             #snackbar {
@@ -346,7 +349,7 @@
     </script>
     <body>
         <div class="splash" id="splash">
-            <img src="splash1.png" style="height: 100%;" >
+            <img src="splash1.png" style="height: 100%; " >
             <h1 class="splash-text">Wedding Invitation</h1>
         </div>
 
@@ -359,19 +362,20 @@
         <div class="splash" id="header" style="display: none;">
             <img src="headerback.png" style="height: 100%;" >
                 <h1 class="header-text" >Harshitha</h1>
-                <h2 class="header-mid-text" style="margin-top: 15%;">&hearts;</h2>
-                <h1 class="header-text" style="margin-top: 30%;">Shashidhar</h1>
+                <h2 class="header-mid-text" style="margin-top: 10%;">&hearts;</h2>
+                <h1 class="header-text" style="margin-top: 20%;">Shashidhar</h1>
                 <img src="groom.png" style="position: fixed; bottom: 0; right: 0; " onclick="myFunction()">
                 <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onchange="check()">
                 <div id="snackbar"> >> Drag to Bring Us Close..! >></div>
 
         </div>  
 
-        <section style="display: none;" id="mainsec">
-            
+        <section style="display: none;" id="mainsec" class="splash">
+            <img src="splash2.png" style="height: 100%; " >
             <header><p class="hashtag">#HARSHITHASHASHIDHAR</p></header>
 
-            <section id="first">
+            <section id="first" class="splash">
+                
                 <img class="hero-image" src="header.webp">
                 <h1 class="name">Harshitha</h1>
                 <p class="name-sub">D/O</p>
