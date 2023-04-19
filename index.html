@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
 
     <style>
+        
         *{
             font-family: 'Montserrat', sans-serif;
             text-decoration: none;
@@ -20,18 +21,9 @@
             list-style: none;
             box-sizing: border-box;
         }
-        @keyframes fade {
-        from {opacity: 0.7}
-        to {opacity: 1}
-        }
+        
         body{
-            /* background-color: #f9f9f9; 
-            background-image: url('back.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100%;*/
-           background-image: linear-gradient(#090a11,#5d041c,#090a11);
-
+            background-image: linear-gradient(#090a11,#5d041c,#090a11);
         }
         
         footer{
@@ -56,17 +48,17 @@
             position: fixed;
             height: 120px;
             display: flex;
-            z-index: 200;
-            background-color: transparent;
-            align-items: start;
+            z-index: 1000;
+            border-bottom: 1px #e3a304 solid;
+            background-color: #090a11;
+            align-items: center;
         }
         .hashtag{
             margin: auto; 
             font-weight: bold;
             font-size: 300%;
             font-family: 'Macondo';
-
-            color: #000;
+            color: #e3a304;
         }
         .name{
             font-family: 'Great Vibes';
@@ -78,30 +70,22 @@
         
         .name-sub{
             z-index: 1000; 
-            position: absolute; 
-            top: 25%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            text-align: center;
             font-family: 'Kalam';
-            font-size: 250%;
-            color: #333;
+            font-size: 225%;
+            color: #db9d00;
         }
         .name-mid{
             z-index: 1000; 
-            position: absolute; 
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             font-family: 'Tangerine';
             font-size: 500%;
             text-align: center;
-            color: rgb(255, 66, 66);
+            color: #e3a304;
         }
         .name-sub-bold{
-            margin: auto; 
             font-family: 'Kalam';
             text-align: center;
-            color: #333;
+            color: #db9d00;
         }
         .hero-image{
             margin-left: auto;
@@ -120,13 +104,13 @@
         .button-cus{
             width: 40%;
             display: inline-block;
-            border: 3px solid #222;
+            border: 3px solid #f9a602;
             font-size: 350%;
             background-color: transparent;
-            color: #222;
+            color: #f9a602;
             z-index: 1000; 
             position: absolute; 
-            top: 55%;
+            top: 70%;
             left: 50%;
             transform: translate(-50%, -50%);
             font-family: 'Dongle';
@@ -136,7 +120,7 @@
             display: inline-block;
             font-size: 200%;
             background-color: transparent;
-            color: #fff;
+            color: #f9a602;
             float: left;
             text-align: center;
             align-items: center;
@@ -146,12 +130,12 @@
         }
 
         .button-cus :hover{
-            background-color: #e4a91f;
+            background-color: #f9a602;
             color: #a30575;
             cursor: pointer;
         }
         .text{
-            color: #e4a91f;
+            color: #f9a602;
             font-size: 150%;
             justify-content: center;
             text-align: center;
@@ -167,8 +151,7 @@
         }
         .icon{
             width: 20%;
-            filter: invert(100%);
-            margin-bottom: 5%;
+            filter: brightness(0) saturate(100%) invert(64%) sepia(43%) saturate(2183%) hue-rotate(3deg) brightness(102%) contrast(99%);            margin-bottom: 5%;
             margin-top: -5%;
         }
 
@@ -177,20 +160,19 @@
             position: fixed;
             bottom: 0;
             width: 80%;
-            margin-left: -50%;
             height: 600px;
             background: transparent;
             outline: none;
             opacity: 1;
             -webkit-transition: .2s;
             transition: opacity .2s;
-            }
+        }
 
-            .slider:hover {
+        .slider:hover {
             opacity: 1;
-            }
+        }
 
-            .slider::-webkit-slider-thumb {
+        .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
             width: 230px;
@@ -199,103 +181,67 @@
             height: 600px;
             box-shadow: none;
             cursor: pointer;
-            }
-            .slider::-webkit-slider-thumb :focus {
+        }
+        .slider::-webkit-slider-thumb :focus {
             
             outline: none;
-            
             cursor: pointer;
-            }
+        }
 
-            .slider::-moz-range-thumb {
+        .slider::-moz-range-thumb {
             width: 25px;
             height: 25px;
             background: #e4a91f;
             cursor: pointer;
-            }
+        }
 
-            .splash{
-                height: 100%;
-                overflow: hidden;
-                position: relative;
-                text-align: center;
-            }
+        .splash{
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
 
             
 
-            .splash-text{
-                color: #fff;
-                z-index: 10; position: absolute; 
-                top: 80%;
-                left: 70%;
-                transform: translate(-50%, -50%);
-                font-family: 'Macondo';
-                font-size: 700%;
-            }
-            
-            .header-text{
-                color: #f9a602;
-                top: 10%;
-                text-align: center;
-                left: 70%;
-                font-family: 'Oregano';
-                font-size: 750%;
-            }
+        .splash-text{
+            color: #fff;
+            z-index: 10; position: absolute; 
+            top: 80%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            font-family: 'Macondo';
+            font-size: 700%;
+        }
+        
+        .header-text{
+            color: #f9a602;
+            text-align: center;
+            font-family: 'Oregano';
+            font-size: 750%;
+        }
+        .header-mid-text{
+            color: navy;
+            font-family: 'Tangerine';
+            font-size: 600%;
+            text-align: center;
+        }
+        #snackbar {
+            margin: auto;
+            background-color: transparent; 
+            color: #f9a602; 
+            text-align: center; 
+            border-radius: 2px; 
+            font-size: 150%;
+            padding: 16px;
+            position: fixed;
+            left: 33%;
+            z-index: 1; 
+            bottom: 2%;
+            border-radius: 5%; 
+        }
 
-            .header-mid-text{
-                color: navy;
-                font-family: 'Yatra One';
-                 font-size: 600%;
-                z-index: 10; position: absolute; 
-                top: 10%;
-                left: 70%;
-                transform: translate(-50%, -50%);
-            }
-            #snackbar {
-                min-width: 350px; /* Set a default minimum width */
-                margin-left: -125px; /* Divide value of min-width by 2 */
-                background-color: #333; /* Black background color */
-                color: #fff; /* White text color */
-                text-align: center; /* Centered text */
-                border-radius: 2px; /* Rounded borders */
-                font-size: 150%;
-                padding: 16px; /* Padding */
-                position: fixed; /* Sit on top of the screen */
-                z-index: 1; /* Add a z-index if needed */
-                left: 50%; /* Center the snackbar */
-                bottom: 30px;
-                border-radius: 5%; /* 30px from the bottom */
-            }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
-  visibility: visible; /* Show the snackbar */
-  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-  However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
-}
       
     </style>
     <script text="text/s">
@@ -370,71 +316,68 @@
         </div>
 
         <div id="header" style="display: none;">
-            <img class="hero-image" src="header.webp" style="margin-top: 20%;">
-            <h1 class="header-text" >Harshitha</h1>
-            <h2 class="header-mid-text" style="margin-top: 15%;">&hearts;</h2>
-            <h1 class="header-text" style="margin-top: 30%;">Shashidhar</h1>
+            <img class="hero-image" src="header.webp" style="margin-top: 5%;">
+            <h1 class="header-text"style="margin-top: -10%;">Harshitha</h1>
+            <h2 class="header-mid-text" style="margin-top: 5%;">&hearts;</h2>
+            <h1 class="header-text" style="margin-top: 5%;">Shashidhar</h1>
+            <img class="boder-bottom" src="border.webp"style="margin-bottom: 50%;">
+
             <img src="groom.png" style="position: fixed; bottom: 0; right: 0; " onclick="myFunction()">
             <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onchange="check()">
             <div id="snackbar"> >> Drag to Bring Us Close..! >></div>
 
         </div>  
 
-        <section style="display: none;" id="mainsec" class="splash">
-            <img src="splash2.png" style="height: 100%; " >
+        <section style="display: none;" id="mainsec">
+            
             <header><p class="hashtag">#HarshithaShashidhar</p></header>
 
             <section id="first">
                 
-                <img class="hero-image" src="header.webp">
-                <h1 class="name">Harshitha</h1>
-                <p class="name-sub" style="margin-top: 2%;">D/O</p>
-                <p class="name-sub" style="margin-top: 7%;"><b class="name-sub-bold">Paramesha</b> & <b class="name-sub-bold">Bhanumathi</b></p>
-                <img class="boder-bottom" src="border.webp">
+                <img class="hero-image" style="margin-top: 2%;" src="header.webp">
+                <h1 class="name" style="margin-top: -10%;">Harshitha</h1>
+                <p class="name-sub" style="margin-top: 1%;">D/O</p>
+                <p class="name-sub" style="margin-top: -1%;"><b class="name-sub-bold">Paramesha</b> & <b class="name-sub-bold">Bhanumathi</b></p>
+                <img class="boder-bottom" style="margin-top: -10%;" src="border.webp">
 
-                <h2 class="name-mid" style="margin-top: 30%;">weds</h2>
+                <h2 class="name-mid" style="margin-top: -5%;">weds</h2>
 
                 <img class="hero-image" src="header.webp">
-                <h1 class="name" style="margin-top: 45%;">Shashidhar</h1>
-                <p class="name-sub"style="margin-top: 47%;">S/O</p>
-                <p class="name-sub" style="margin-top: 52%;"><b class="name-sub-bold" >Puttaswamy</b> & <b class="name-sub-bold">Manjula</b></p>
+                <h1 class="name" style="margin-top: -11%;">Shashidhar</h1>
+                <p class="name-sub"style="margin-top: 1%;">S/O</p>
+                <p class="name-sub" style="margin-top: -1%;"><b class="name-sub-bold" >Puttaswamy</b> & <b class="name-sub-bold">Manjula</b></p>
                 <img class="boder-bottom" src="border.webp">
             </section>  
 
             <section id="second" style="display: none;"> 
-                <p class="name-sub" style="margin-top: -20%;">The Wedding</p>
-                <h1 class="name" style="margin-top: -2%; font-size: 350%; ">Harshitha &hearts; Shashidhar</h1>
+                <p class="name-sub" style="margin-top: 15%; font-size: 150%;">The Wedding</p>
+                <h1 class="name" style="margin-top: 3%; font-size: 350%; ">Harshitha &hearts; Shashidhar</h1>
+                <img class="boder-bottom" src="border.webp">
+                <h2 class="name-mid" style="margin-top: -15%;">Reception</h2>
+                <p class="name-sub" style="margin-top: 5%; width: 100%; font-size: 100%;">Sunday, May 7th @ 7:30 PM</p>
+                <p class="name-sub" style=" width: 100%; font-size: 100%;">Sri Annapoornrshvari Kalyana Mantapa, Hassan</p>
+                <img class="boder-bottom" src="border.webp">
+                <h2 class="name-mid" style="margin-top: -15%;">Muhurtha</h2>
+                <p class="name-sub" style="margin-top: 5%; width: 100%; font-size: 100%;">Monday, May 8th @ 00:00 AM</p>
+                <p class="name-sub" style="  width: 100%; font-size: 100%;">Sri Annapoornrshvari Kalyana Mantapa, Hassan</p>
 
-                <h2 class="name-mid" style="margin-top: 13%; color: #222;">Reception</h2>
-                <p class="name-sub" style="margin-top: 11%; width: 100%;">Sunday, May 7th @ 7:30 PM</p>
-                <p class="name-sub" style="margin-top: 16%; width: 100%;">Sri Annapoornrshvari Kalyana Mantapa, Hassan</p>
-
-                <h2 class="name-mid" style="margin-top: 41%; color: #222;">Muhurtha</h2>
-                <p class="name-sub" style="margin-top: 38%; width: 100%;">Monday, May 8th @ 00:00 AM</p>
-                <p class="name-sub" style="margin-top: 43%;  width: 100%;">Sri Annapoornrshvari Kalyana Mantapa, Hassan</p>
-
-                <button class="button-cus" style="left: 25%;">Get Direction</button>
-                <button class="button-cus" style="left: 75%;">Contacts</button>
-
+                <button class="button-cus" style="left: 25%;" onclick="location.href='https://www.google.co.in/maps/place/Shri+Annapoorneshwari+Kalyana+Mantapa+%E0%B2%B6%E0%B3%8D%E0%B2%B0%E0%B3%80+%E0%B2%85%E0%B2%A8%E0%B3%8D%E0%B2%A8%E0%B2%AA%E0%B3%82%E0%B2%B0%E0%B3%8D%E0%B2%A3%E0%B3%87%E0%B2%B6%E0%B3%8D%E0%B2%B5%E0%B2%B0%E0%B2%BF+%E0%B2%95%E0%B2%B2%E0%B3%8D%E0%B2%AF%E0%B2%BE%E0%B2%A3+%E0%B2%AE%E0%B2%82%E0%B2%9F%E0%B2%AA/@13.0248265,76.1034126,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba548351f00e01f:0x7f46737e4100f5b!8m2!3d13.0248213!4d76.1059875!16s%2Fg%2F11b64tdw3b?hl=en-US'">Get Direction</button>
+                <button class="button-cus" style="left: 75%;" onclick="location.href='tel:+919590774259'">Contacts</button>
+                <br><br><br>
 
             </section>  
 
             <section id="third"  style="display: none;">
-                <img class="boder-bottom" src="border.webp">
+                <img class="boder-bottom" style="margin-top: 5%;" src="border.webp">
                 <h2 class="name-mid" style="margin-top: -10%;">The First Meet</h2>
-                <p class="name-sub" style="margin-top: 10%;">Sunday, May 7th @ 7:30 PM</p>
+                <p class="name-sub">Sunday, November 20</p>
                 <img class="logo" src="rose.png">
-
-                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium nam aut similique molestias unde velit. Reiciendis ratione dolor reprehenderit saepe consectetur dicta illum, mollitia nemo obcaecati dolorem, optio est quod.</p>
-
 
                 <img class="hero-image" src="header.webp">
                 <h2 class="name-mid" style="margin-top: -10%;">The Begin</h2>
-                <p class="name-sub" style="margin-top: 10%;">Sunday, May 7th @ 7:30 PM</p>
+                <p class="name-sub">Sunday, May 7th @ 7:30 PM</p>
                 <img class="logo" src="wedding-rings.png">
-
-                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium nam aut similique molestias unde velit. Reiciendis ratione dolor reprehenderit saepe consectetur dicta illum, mollitia nemo obcaecati dolorem, optio est quod.</p>
-
+                <img class="boder-bottom" src="border.webp">
 
             </section> 
 
