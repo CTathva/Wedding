@@ -26,7 +26,11 @@
         }
         body{
             /* background-color: #f9f9f9; */
-           background-image: linear-gradient(#090a11,#5d041c,#090a11);
+            background-image: url('back.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+           /*background-image: linear-gradient(#090a11,#5d041c,#090a11);*/
 
         }
         
@@ -232,11 +236,10 @@
             }
             
             .header-text{
-                color: #FFF;
-                z-index: 10; position: absolute; 
+                color: #f9a602;
                 top: 10%;
+                text-align: center;
                 left: 70%;
-                transform: translate(-50%, -50%);
                 font-family: 'Oregano';
                 font-size: 750%;
             }
@@ -251,20 +254,20 @@
                 transform: translate(-50%, -50%);
             }
             #snackbar {
-        min-width: 350px; /* Set a default minimum width */
-        margin-left: -125px; /* Divide value of min-width by 2 */
-        background-color: #333; /* Black background color */
-        color: #fff; /* White text color */
-        text-align: center; /* Centered text */
-        border-radius: 2px; /* Rounded borders */
-        font-size: 150%;
-        padding: 16px; /* Padding */
-        position: fixed; /* Sit on top of the screen */
-        z-index: 1; /* Add a z-index if needed */
-        left: 50%; /* Center the snackbar */
-        bottom: 30px;
-        border-radius: 5%; /* 30px from the bottom */
-}
+                min-width: 350px; /* Set a default minimum width */
+                margin-left: -125px; /* Divide value of min-width by 2 */
+                background-color: #333; /* Black background color */
+                color: #fff; /* White text color */
+                text-align: center; /* Centered text */
+                border-radius: 2px; /* Rounded borders */
+                font-size: 150%;
+                padding: 16px; /* Padding */
+                position: fixed; /* Sit on top of the screen */
+                z-index: 1; /* Add a z-index if needed */
+                left: 50%; /* Center the snackbar */
+                bottom: 30px;
+                border-radius: 5%; /* 30px from the bottom */
+            }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 #snackbar.show {
@@ -358,6 +361,8 @@
 
         }
     </script>
+    <title>#HARSHITHASHASHIDHAR</title>
+    </head>
     <body>
 
         <div id="splash">
@@ -366,14 +371,14 @@
             <img class="boder-bottom" src="border.webp"style="margin-bottom: 50%;">
         </div>
 
-        <div class="splash" id="header" style="display: none;">
-            <img src="headerback.png" style="height: 100%;" >
-                <h1 class="header-text" >Harshitha</h1>
-                <h2 class="header-mid-text" style="margin-top: 15%;">&hearts;</h2>
-                <h1 class="header-text" style="margin-top: 30%;">Shashidhar</h1>
-                <img src="groom.png" style="position: fixed; bottom: 0; right: 0; " onclick="myFunction()">
-                <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onchange="check()">
-                <div id="snackbar"> >> Drag to Bring Us Close..! >></div>
+        <div id="header" style="display: none;">
+            <img class="hero-image" src="header.webp" style="margin-top: 20%;">
+            <h1 class="header-text" >Harshitha</h1>
+            <h2 class="header-mid-text" style="margin-top: 15%;">&hearts;</h2>
+            <h1 class="header-text" style="margin-top: 30%;">Shashidhar</h1>
+            <img src="groom.png" style="position: fixed; bottom: 0; right: 0; " onclick="myFunction()">
+            <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onchange="check()">
+            <div id="snackbar"> >> Drag to Bring Us Close..! >></div>
 
         </div>  
 
